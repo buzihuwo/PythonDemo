@@ -17,3 +17,5 @@ for a in list001:
     if(a=='李四'):
         continue
     print(a)
+
+
