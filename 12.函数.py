@@ -34,4 +34,4 @@ def bName(name,address,*args,**args2):
  只要是没定义的如abc都会进args
  只要是关键字参数的如age=18,sex='男'都会进args2
 '''
-bName('张家辉','香港','a','b','c',age=18,sex='男') 
+bName('张家辉','香港','a','b','c',age=18,sex='男')  
