@@ -35,3 +35,25 @@ def bName(name,address,*args,**args2):
  只要是关键字参数的如age=18,sex='男'都会进args2
 '''
 bName('张家辉','香港','a','b','c',age=18,sex='男')  
+
+
+# 返回函数
+def max(x,y):
+    if x>y:
+        return x
+    else:
+        return y
+print(max(1,2))
+
+
+# 返回多个函数
+def num(x,y):
+    return x,y
+
+# 一个变量接受
+num11=num(22,33)
+print(num11)
+# 多个变量接受
+num2,num3=num(22,33)
+print('第一个数%s,第二个数%s'%(num2,num3))
+
