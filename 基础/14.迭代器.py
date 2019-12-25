@@ -15,4 +15,22 @@ a =iter(list001)
 print(a)
 print(next(a))
 print(next(a))
-print(next(a))
+print(next(a)) 
+
+
+
+# 练习
+# 判断类型用的 
+isinstance(a,str)
+
+def getList(*args):
+    list002=[i for i in args]
+    return list002
+print(getList(1,3,2,4))
+
+def getSum(*args):
+    a=0
+    for i in args:
+        a+=i
+    return a
+print(getSum(2,3,4,2,1,3,1,2))
