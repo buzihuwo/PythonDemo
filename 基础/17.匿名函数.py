@@ -17,8 +17,3 @@ print(a(3))
 q=lambda x,y: x*y
 print(q(3,4))
 
-# 字典排序
-dic={'a':1,'c':2,'b':3}
-# 通过内置函数sorted进行排序
-dic=sorted(dic.items(),key=lambda x: x[1],reverse=True) #内置函数有返回值  reverse=True是倒序   
-print({k:v  for k,v in dic})#字段推导式
