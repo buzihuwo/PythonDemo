@@ -7,12 +7,13 @@ class person():
     '''
     # 实例属性通过构造方法来声明
     #self不是关键字，代表当前对象
-    def __init__(self,name,age,sex):#构造方法
+    def __init__(self,name,age,sex,address):#构造方法
         # 构造方法不需要调用，它会在实例化的时候自动调用
         print('我是构造方法，在实例化的时候调用')
         self.name=name #通过self 创建实例属性，并赋值
         self.age=age
         self.sex=sex
+        self.__address=address #__address是私有属性
 
     # 创建普通方法
     def getName(self):
@@ -22,10 +23,9 @@ class person():
 
 
 # 实例化对象
-people01 = person('joe',19,'男')   #在实例化的时候传递参数
+people01 = person('joe',19,'男','地球')   #在实例化的时候传递参数
 people01.getName() #调用类里面的方法
 print(people01.country)#调用类里面的类属性
-
 
 # 内置内属性
 print(people01.__dict__) # 会将实例对象的属性和值通过字典的形式返回
