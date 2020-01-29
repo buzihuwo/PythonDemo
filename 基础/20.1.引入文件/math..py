@@ -9,11 +9,32 @@ print('%s%s%s'%('_'*10,'引入同级目录中的模块','_'*10))
 name.a()
 
 '''
+重新加载
+'''
+print('%s%s%s'%('_'*10,'重新加载','_'*10))
+import imp
+imp.reload(name)
+
+
+'''
 跨模块引入
 '''
 from study import  test
 print('%s%s%s'%('_'*10,'引入同级目录文件夹下的模块','_'*10))
 test.a(3,6)
+
+
+'''
+导入模块包
+模块 里面必须要有__init__文件
+'''
+print('%s%s%s'%('_'*10,'导入模块包','_'*10))
+from ImportModule import *
+send.sendMsg()
+recv.recvMsg()
+
+
+
 
 
 
@@ -33,3 +54,6 @@ dir
 该列表列出了所有类型的名称：变量，模块,函数，等等
 '''
 print(dir())
+
+
+
