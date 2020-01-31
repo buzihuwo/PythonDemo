@@ -13,12 +13,51 @@ a+：追加读写，会将文件的指针调到文件的末尾
 '''
 
 
-
+# 读 第一种   
 # 打开文件
-f=open('d:\\北风网人工智能\\PythonDemo\\基础\\test.txt',encoding='utf-8') 
-print(f)
-#  读写文件
+f=open('基础\\test.txt','r',encoding='utf-8') 
+#  读取文件内容
+# print(f.read()) 
 
+print(f.readlines()) #按行来读取
 #  关闭文件
 f.close()
 
+# 第二种   不需要close，它会自己关闭
+with open('基础\\test.txt','r',encoding='utf-8') as f:
+    print(f.read())
+
+
+# 写  
+f1=open('基础\\test.txt','a',encoding='utf-8')
+f1.write('写入操作')
+f1.close()
+
+
+'''
+文件与文件夹的操作
+'''
+import os
+# 获取当前路径
+print(os.getcwd())
+
+# 列出当前或指定目录下的文件
+print(os.listdir())
+
+# 判断是否是一个文件
+print(os.path.isfile('基础\\demo.txt'))
+
+# 判断文件是否存在
+print(os.path.exists('基础\\demo.txt'))
+
+#重命名文件
+# os.rename('基础\\demo.txt','基础\\demo1.txt')
+
+#删除文件
+# os.remove('基础\\demo.txt')
+
+# 创建文件夹
+# os.mkdir('基础\\demo')
+
+#删除文件夹
+# os.rmdir('基础\\demo')
