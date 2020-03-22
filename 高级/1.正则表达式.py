@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+# -*- encoding: utf-8 -*-
 '''
 正则表达式规则
 
@@ -80,7 +80,19 @@ print(patt3.findall(str3))
 '''
 练习
 '''
+
+strlx1='''12312412@qq.com
+sdfsdfsgd@163.com
+http://www.baidu.com
+https://www.sae.com
+ftp://www.nnn.org
+'''
+pattlc1=re.compile('\w+:/\/\www(\.\w+)(\.\w+){1,2}')
+print([i.group() for i in pattlc1.finditer(strlx1)])
+
+
+
 stra='13955668877'
-patt=re.compile('(\d[3])\d[4](\d[4])')
+patt=re.compile('(\d{3})\d{4}(\d{4})')
 print('%s%s%s'%('-'*10,'练习','-'*10))
-print([i.group() for i in patt.finditer(stra)])
+print([i.group(1)+'****'+i.group(2) for i in patt.finditer(stra)])
