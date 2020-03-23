@@ -8,12 +8,7 @@
             "name": "Python: 当前文件",
             "type": "python",
             "request": "launch",
-            "pythonPath": "C:/Users/Dell/Anaconda3/python",
-            // "pythonPath": "C:/Users/28135/AppData/Local/Programs/Python/Python38/python.exe",
             "program": "${file}",
-            "cwd": "${workspaceFolder}",
-            "env": {},
-            "envFile": "${workspaceFolder}/.env",
             "console": "integratedTerminal"
         }
     ]
