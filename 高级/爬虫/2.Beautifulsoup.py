@@ -10,7 +10,7 @@ import re
 import requests
 # 请求页面获取html
 r=requests.get('http://www.baidu.com').content.decode('UTF-8')
-soup=BeautifulSoup(r,'html.parser')# lxml
+soup=BeautifulSoup(r,'html.parser')# 还有一种格式lxml
 # print(type(soup))#解析html文档对象
 html=soup.prettify()#美化格式
 # print(html)
