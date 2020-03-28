@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/user/register" method="POST">
+        <!-- 设置跨域请求 -->
+        {% csrf_token %}
+        账号：<input type="text" name="userAcc" placeholder="请输入账号" required>
+        <br>
+        密码：<input type="password" name="userPass" placeholder="请输入密码">
+        <br>
+        确认密码：<input type="password" placeholder="请输入密码">
+        <br>
+        地址：
+        <select name="address">
+            <option value="北京">北京</option>
+            <option value="上海">上海</option>
+            <option value="山西">山西</option>
+            <option value="陕西">陕西</option>
+        </select>
+        <select name="address">
+            <option value="北京">北京</option>
+            <option value="上海">上海</option>
+            <option value="太原">太原</option>
+            <option value="西安">西安</option>
+        </select>
+        <select name="address">
+            <option value="北京">北京</option>
+            <option value="上海">上海</option>
+            <option value="太原">太原</option>
+            <option value="西安">西安</option>
+        </select>
+        <br>
+        <input type="submit" value="登录">
+    </form>
+</body>
+
+</html>
