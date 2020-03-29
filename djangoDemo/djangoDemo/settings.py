@@ -114,6 +114,11 @@ USE_L10N = True
 
 USE_TZ = True
 
+# Session的cookie失效日期30分钟（默认）
+SESSION_COOKIE_AGE = 60*30
+# 是否关闭浏览器使得Session过期（默认）
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+
 # post 设置
 # APPEND_SLASH = False
 

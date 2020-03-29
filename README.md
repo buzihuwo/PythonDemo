@@ -8,3 +8,6 @@ https://www.cnblogs.com/ribavnu/p/4886472.html
 
 python3.5标准库中文版目录
 https://blog.csdn.net/manimanihome/article/details/53043431
+
+django
+https://www.bilibili.com/video/BV13E411N7Eo?p=6

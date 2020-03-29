@@ -27,4 +27,7 @@ urlpatterns = [
     path('user/login', views.login),
 
     path('user/register', views.register),
+
+    path('testRender/', views.testRender),
+    path('testRdirect/', views.testRdirect),
 ]
