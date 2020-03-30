@@ -62,3 +62,16 @@ def testRender(request):
 
 def testRdirect(request):
     return redirect('http://www.baidu.com')
+
+# 模板中复制数据展示
+
+
+def testTemplate(request):
+    context = dict()
+    context['userInfo'] = {'name': '王敏', 'age': 18, 'sex': '女'}
+    context['infos'] = [
+        {'name': '王敏', 'age': 18, 'sex': '女', 'hobby': ['吃', '爬山']},
+        {'name': '王敏1', 'age': 18, 'sex': '男', 'hobby': ['吃1', '爬山1']},
+        {'name': '王敏2', 'age': 18, 'sex': '女', 'hobby': ['吃2', '爬山2']}
+    ]
+    return render(request, 'testTemplate.html', context)

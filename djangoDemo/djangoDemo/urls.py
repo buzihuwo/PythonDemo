@@ -30,4 +30,5 @@ urlpatterns = [
 
     path('testRender/', views.testRender),
     path('testRdirect/', views.testRdirect),
+    path('testTemplate/', views.testTemplate),
 ]

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% include 'top.html' %}
+    <!-- 包含页面 -->
+    显示数据<br>
+    {{userInfo}}<br>
+    {# 显示字典中数据  --注释 #}
+    姓名 {{userInfo.name}} 年龄 {{userInfo.age}} 性别 {{userInfo.sex}}<br>
+    {# 显示list,set,tuple 类型数据 #}
+    <table border="1">
+        <tr>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>年龄</td>
+            <td>兴趣</td>
+        </tr>
+        {% for us  in infos %}
+        <tr>
+            <td>{{us.name}}</td>
+            <td>{{us.sex}}</td>
+            <td>{{us.age}}</td>
+            <td>
+                {% for hobby  in us.hobby %}
+                {{hobby}}
+                {% endfor %}
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+    -------------------------if----------------------------
+    <br>
+    性别 {{userInfo.sex}}<br>
+    男<input type="radio" name="sex" {% if userInfo.sex == '男' %} checked {% endif %}>
+    女<input type="radio" name="sex" {% if userInfo.sex == '女' %} checked {% endif %}>
+    <br>
+    年龄范围
+    {% if userInfo.age == 60 %}
+    老年人
+    {% elif userInfo.age >= 30 and userInfo.age < 60 %}
+    中年人
+    {% else %}
+    青年
+    {% endif %}
+
+    {% include 'bottom.html' %}
+    <!-- 包含页面 -->
+</body>
+
+</html>
