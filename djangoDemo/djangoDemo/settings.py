@@ -76,8 +76,17 @@ WSGI_APPLICATION = 'djangoDemo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # sqlite3数据库
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 数据地址
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': '192.168.1.22',
+        'USER': 'root',
+        'PASSWORD': '123456',
+        'PORT': 3306,
+        'NAME': 'djangodatabase',
+        # 'OPTIONS':{'isolation_level':None},
     }
 }
 

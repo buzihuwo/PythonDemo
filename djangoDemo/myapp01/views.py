@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect  # render 请求转发  redirect 响应重定向
-
+from myapp01.models import UserInfo, OrderInfo
 # Create your views here.
 '''
 定义视图函数
@@ -75,3 +75,10 @@ def testTemplate(request):
         {'name': '王敏2', 'age': 18, 'sex': '女', 'hobby': ['吃2', '爬山2']}
     ]
     return render(request, 'testTemplate.html', context)
+
+# 添加用户
+
+
+def userReg(request):
+    UserInfo.objects.create(userAccount='wm001', userPass='123456')  # 创建对象
+    return render(request, 'test.html')
