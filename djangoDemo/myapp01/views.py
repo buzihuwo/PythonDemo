@@ -1,3 +1,4 @@
+import uuid
 from django.shortcuts import render, redirect  # render 请求转发  redirect 响应重定向
 from myapp01.models import UserInfo, OrderInfo
 # Create your views here.
@@ -81,4 +82,12 @@ def testTemplate(request):
 
 def userReg(request):
     UserInfo.objects.create(userAccount='wm001', userPass='123456')  # 创建对象
+    return render(request, 'test.html')
+
+
+def orderAdd(request):
+    # 查询这个账号密码的用户
+    user = UserInfo.objects.filter(userAccount='wm001', userPass='123456')[0]
+    OrderInfo.objects.create(orderId=uuid.uuid1(),
+                             orderMon=11.2, userInfo=user)
     return render(request, 'test.html')

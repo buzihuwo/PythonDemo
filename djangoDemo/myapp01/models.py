@@ -16,7 +16,7 @@ Python  manage.py migrate
 class UserInfo(models.Model):
     # 定义字段
     # 主键
-    userId = models.BigAutoField(primary_key=True,)
+    userId = models.BigAutoField(primary_key=True)
     userAccount = models.CharField(
         max_length=50, unique=True)  # unique=True是唯一的
     userPass = models.CharField(max_length=30)
@@ -26,8 +26,6 @@ class UserInfo(models.Model):
 
     class Meta:
         db_table = 'userInfoTable'
-
-    pass
 
 
 class OrderInfo(models.Model):

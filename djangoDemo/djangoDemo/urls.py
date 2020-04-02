@@ -33,4 +33,5 @@ urlpatterns = [
     path('testTemplate/', views.testTemplate),
 
     path('userReg/', views.userReg),
+    path('orderAdd/', views.orderAdd),
 ]
