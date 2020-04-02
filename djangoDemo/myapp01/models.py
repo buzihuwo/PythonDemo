@@ -37,3 +37,25 @@ class OrderInfo(models.Model):
 
     class Meta:
         db_table = 'order_Table'
+
+# 商品模型表
+
+
+class Product(models.Model):
+    productId = models.BigAutoField(primary_key=True)
+    productName = models.CharField(max_length=200)
+    productPrice = models.DecimalField(max_digits=11, decimal_places=2)
+    productImg = models.CharField(max_length=200, null=True)
+
+    class Meta:
+        db_table = 'product'
+
+# 用户购物车  多对多关系
+
+
+class UserGoods(models.Model):
+    user = models.ForeignKey(UserInfo, on_delete=models.DO_NOTHING)
+    product = models.ForeignKey(Product, on_delete=models.DO_NOTHING)
+
+    class Meta:
+        db_table = 'userGoods'

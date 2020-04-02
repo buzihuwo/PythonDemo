@@ -9,5 +9,5 @@ https://www.cnblogs.com/ribavnu/p/4886472.html
 python3.5标准库中文版目录
 https://blog.csdn.net/manimanihome/article/details/53043431
 
-django  19:33
+django  49:39
 https://www.bilibili.com/video/BV13E411N7Eo?p=10

@@ -91,3 +91,6 @@ def orderAdd(request):
     OrderInfo.objects.create(orderId=uuid.uuid1(),
                              orderMon=11.2, userInfo=user)
     return render(request, 'test.html')
+
+
+# def userAddGoods(request):
